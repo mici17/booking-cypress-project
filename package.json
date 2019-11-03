@@ -1,0 +1,22 @@
+{
+  "name": "booking-cypress-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mici17/booking-cypress-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mici17/booking-cypress-project/issues"
+  },
+  "homepage": "https://github.com/mici17/booking-cypress-project#readme",
+  "dependencies": {
+    "cypress": "^3.6.0"
+  }
+}
