@@ -1,18 +1,21 @@
 import {
+    CREDENTIALS
+} from '../../../config/credentials';
+import {
+    GlobalPO
+} from '../../shared/Global.po';
+import {
     LoginPagePo
-} from '../LoginPageObjects/LoginPageObjects.po';
+} from '../pageObjects/LoginPage.po';
 
 import {
     HomePagePo
-} from '../../HomePage/HomePageObjects/HomePageObjects.po';
+} from '../../HomePage/pageObjects/HomePage.po';
 
-import {
-    Credentials
-} from '../../../config/credentialsExample';
 
 describe('Testing login page functionality', () => {
     beforeEach(() => {
-        cy.visit('account.booking.com/sign-in')
+        LoginPagePo.visit()
     })
 
     it('Should show dropdown menu when button is clicked', () => {
@@ -25,11 +28,11 @@ describe('Testing login page functionality', () => {
     })
 
     it('Should be able to sign in', () => {
-        LoginPagePo.enterEmail(Credentials.email)
+        LoginPagePo.enterEmail(CREDENTIALS.EMAIL)
 
-        cy.url('account.booking.com/sign-in/password')
+        GlobalPO.getUrl('account.booking.com/sign-in/password')
 
-        LoginPagePo.enterPassword(Credentials.password)
+        LoginPagePo.enterPassword(CREDENTIALS.PASSWORD)
     })
 
     it('Should show message when email is not entered', () => {
@@ -47,7 +50,7 @@ describe('Testing login page functionality', () => {
     })
 
     it('Should show message when password is not entered', () => {
-        LoginPagePo.enterEmail(Credentials.email)
+        LoginPagePo.enterEmail(CREDENTIALS.EMAIL)
         LoginPagePo
             .getPasswordInput()
             .type('{enter}')
@@ -58,7 +61,7 @@ describe('Testing login page functionality', () => {
     })
 
     it('Should show error message when invalid password is entered', () => {
-        LoginPagePo.enterEmail(Credentials.email)
+        LoginPagePo.enterEmail(CREDENTIALS.EMAIL)
         LoginPagePo.enterPassword('123')
         LoginPagePo
             .getPasswordErrorMessage()
@@ -82,35 +85,44 @@ describe('Testing login page functionality', () => {
             .getRegistrationLink()
             .click()
 
-        cy.url().should('include', '/account.booking.com/register')
+        GlobalPO
+            .getUrl()
+            .should('include', '/account.booking.com/register')
     })
 
     it('Should redirect to terms page when terms link is clicked', () => {
         LoginPagePo
             .getTermsLink()
             .click()
-        cy.url('*booking.com/content/terms')
+        GlobalPO
+            .getUrl('*booking.com/content/terms')
     })
 
     it('Should redirect to privacy page when privacy link is clicked', () => {
         LoginPagePo
             .getPrivacyLink()
             .click()
-        cy.url('*booking.com/content/privacy')
+        GlobalPO
+            .getUrl('*booking.com/content/privacy')
     })
 
     it('Should redirect to home page when back arrow is clicked', () => {
-        cy.visit('https://www.booking.com/')
+        HomePagePo.visit()
+
         HomePagePo
             .getLoginButton()
             .click()
 
-        cy.url().should('include', '/account.booking.com/sign-in')
+        GlobalPO
+            .getUrl()
+            .should('include', '/account.booking.com/sign-in')
 
         LoginPagePo
             .getButtonBack()
             .click()
 
-        cy.url().should('eq', 'https://www.booking.com/')
+        GlobalPO
+            .getUrl()
+            .should('eq', 'https://www.booking.com/index.sr.html')
     })
 })

@@ -1,10 +1,10 @@
 import {
     LoginPagePo
-} from '../LoginPageObjects/LoginPageObjects.po';
+} from '../pageObjects/LoginPage.po';
 
 describe('Testing if elements exist on Login Page', () => {
     before(() => {
-        cy.visit('https://account.booking.com/sign-in')
+        LoginPagePo.visit()
     })
 
     it('Should have back button on page', () => {

@@ -11,6 +11,10 @@ const SELECTORS = Object.freeze({
 
 class HomePagePageObjects {
 
+    visit() {
+        cy.visit('https://www.booking.com/index.sr.html')
+    }
+
     getLogoImage() {
         cy.get(SELECTORS.LOGOIMAGE)
     }

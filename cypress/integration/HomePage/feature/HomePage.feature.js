@@ -1,10 +1,14 @@
 import {
+    GlobalPO
+} from '../../shared/Global.po';
+import {
     HomePagePo
-} from '../HomePageObjects/HomePageObjects.po';
+} from '../pageObjects/HomePage.po';
+
 
 describe('Home Page functionalty tests', () => {
     before(() => {
-        cy.visit('https://www.booking.com/index.sr.html')
+        HomePagePo.visit()
     })
 
     it('Should show dropdown menu when currency selector is clicked', () => {
@@ -22,17 +26,21 @@ describe('Home Page functionalty tests', () => {
             .getLoginButton()
             .click()
 
-        cy.url().should('include', '/account.booking.com/sign-in')    
+        GlobalPO
+            .getUrl()
+            .should('include', '/account.booking.com/sign-in')
     })
 
     it('Should redirect to register page when registrujte se button is clicked', () => {
-        cy.visit('https://www.booking.com/index.sr.html')
+        HomePagePo.visit()
 
         HomePagePo
             .getRegisterButton()
             .click()
-            
-        cy.url().should('include', '/account.booking.com/register')    
+
+        GlobalPO
+            .getUrl()
+            .should('include', '/account.booking.com/register')
     })
 
 

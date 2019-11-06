@@ -21,6 +21,10 @@ const LOGINSELECTORS = Object.freeze({
 })
 
 class LoginPageObjects {
+    visit() {
+        cy.visit('account.booking.com/sign-in')
+    }
+
     getButtonBack() {
         return cy.get(LOGINSELECTORS.BUTTONBACK)
     }
