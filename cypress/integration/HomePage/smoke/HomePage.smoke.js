@@ -26,4 +26,33 @@ describe('Testing of elements existing on Home Page', () => {
     it('Login input should exist on page', () => {
         HomePagePo.getLoginButton()
     })
+
+    it('Searchbox title should exist on page', () => {
+        HomePagePo.getSearchboxTitle()
+    })
+    
+    it('Searchbox subtitle should exist on page', () => {
+        HomePagePo.getSearchboxSubtitle()
+    })
+
+    it('Destination input should exist on page', () => {
+        HomePagePo.getDestinationInput()
+    })
+
+    
+    it('Date input should exist on page', () => {
+        HomePagePo.getDateInput()
+    })
+    
+    it('Guests input should exist on page', () => {
+        HomePagePo.getGuestsInput()
+    })
+
+    it('Search button should exist on page', () => {
+        HomePagePo.getSearchButton()
+    })
+
+    it('Travel purpose checkbox should exist on page', () => {
+        HomePagePo.getTravelPurposeCheckbox()
+    })
 })

@@ -14,7 +14,7 @@ const SELECTORS = Object.freeze({
     GTA: '.profile_menu__item--gta',
     HELP: '.profile_menu__item--help',
     MYSETTINGS: '.profile_menu__item--mysettings',
-    SIGNOUT: '.profile-menu__link'
+    SIGNOUT: '.profile-menu__item--signout .profile-menu__link'
 
 
 })

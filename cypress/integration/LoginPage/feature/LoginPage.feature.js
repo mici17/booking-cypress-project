@@ -7,11 +7,9 @@ import {
 import {
     LoginPagePo
 } from '../pageObjects/LoginPage.po';
-
 import {
     HomePagePo
 } from '../../HomePage/pageObjects/HomePage.po';
-
 
 describe('Testing login page functionality', () => {
     beforeEach(() => {
