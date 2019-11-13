@@ -3,6 +3,7 @@ const SELECTORS = Object.freeze({
     CURRENCYSELECTOR: '[data-id=currency_selector]',
     DROPDOWNVALUTES: '.uc_currency',
     LANGUAGESELECTOR: '[data-id=language_selector]',
+    LANGUAGETABLE: '#current_language',
     ANIMATIONSPAN: '.add-property-button-animation-text',
     REGISTERBUTTON: '#current_account_create',
     LOGINBUTTON: '#current_account',
@@ -43,7 +44,7 @@ class HomePagePageObjects {
     }
 
     getLogoImage() {
-        cy.get(SELECTORS.LOGOIMAGE)
+        return cy.get(SELECTORS.LOGOIMAGE)
     }
 
     getCurrencySelector() {
@@ -56,6 +57,14 @@ class HomePagePageObjects {
 
     getLanguageSelector() {
         return cy.get(SELECTORS.LANGUAGESELECTOR)
+    }
+
+    getLanguageTable() {
+        return cy.get(SELECTORS.LANGUAGETABLE)
+    }
+
+    getLanguage() {
+        return cy.get(SELECTORS.LANGUAGE)
     }
 
     getAnimationSpan() {

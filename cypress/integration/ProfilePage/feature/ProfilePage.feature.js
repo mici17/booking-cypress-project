@@ -18,10 +18,7 @@ import {
 
 describe('Testing Profile Page functionality', () => {
     beforeEach(() => {
-        HomePagePo.visit()
-        HomePagePo
-            .getLoginButton()
-            .click()
+        LoginPagePo.visit()
         LoginPagePo.enterEmail(CREDENTIALS.EMAIL)
         LoginPagePo.enterPassword(CREDENTIALS.PASSWORD)
     })
@@ -33,6 +30,15 @@ describe('Testing Profile Page functionality', () => {
 
         HomePagePo
             .getDropdownValutes()
+            .should('be.visible')
+    })
+
+    it('Should show language table when language selector is clicked', () => {
+        HomePagePo
+            .getLanguageSelector()
+            .click()
+        HomePagePo
+            .getLanguageTable()
             .should('be.visible')
     })
 

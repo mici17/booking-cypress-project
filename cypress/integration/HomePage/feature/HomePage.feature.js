@@ -21,7 +21,16 @@ describe('Home Page functionalty tests', () => {
             .should('be.visible')
     })
 
-    it('Should redirect to login page when ulogujte se button is clicked', () => {
+    it('Should show language table when language selector is clicked', () => {
+        HomePagePo
+            .getLanguageSelector()
+            .click()
+        HomePagePo
+            .getLanguageTable()
+            .should('be.visible')
+    })
+
+    it('Should redirect to login page when sign in button is clicked', () => {
         HomePagePo
             .getLoginButton()
             .click()
@@ -31,7 +40,7 @@ describe('Home Page functionalty tests', () => {
             .should('include', '/account.booking.com/sign-in')
     })
 
-    it('Should redirect to register page when registrujte se button is clicked', () => {
+    it('Should redirect to register page when register button is clicked', () => {
         HomePagePo
             .getRegisterButton()
             .click()

@@ -8,58 +8,58 @@ describe('Testing if elements exist on Login Page', () => {
     })
 
     it('Should have back button on page', () => {
-        LoginPagePo.getButtonBack()
+        LoginPagePo.getButtonBack().should('exist')
     })
 
     it('Should have logo on page', () => {
-        LoginPagePo.getLogo()
+        LoginPagePo.getLogo().should('exist')
     })
 
     it('Should have dropdpwn button', () => {
-        LoginPagePo.getDropdownButton()
+        LoginPagePo.getDropdownButton().should('exist')
     })
 
     it('Should have heading on page', () => {
-        LoginPagePo.getHeading()
+        LoginPagePo.getHeading().should('exist')
     })
 
     it('Should have description', () => {
-        LoginPagePo.getDescription()
+        LoginPagePo.getDescription().should('exist')
     })
 
     it('Should have email input', () => {
-        LoginPagePo.getEmailInput()
+        LoginPagePo.getEmailInput().should('exist')
     })
 
     it('Should have submit button', () => {
-        LoginPagePo.getSubmitButton()
+        LoginPagePo.getSubmitButton().should('exist')
     })
 
     it('Should have facebook button', () => {
-        LoginPagePo.getFacebookButton()
+        LoginPagePo.getFacebookButton().should('exist')
     })
 
     it('Should have google button', () => {
-        LoginPagePo.getGoogleButton()
+        LoginPagePo.getGoogleButton().should('exist')
     })
 
     it('Should have registration link', () => {
-        LoginPagePo.getRegistrationLink()
+        LoginPagePo.getRegistrationLink().should('exist')
     })
 
     it('Should have terms link', () => {
-        LoginPagePo.getTermsLink()
+        LoginPagePo.getTermsLink().should('exist')
     })
 
     it('Should have privacy link', () => {
-        LoginPagePo.getPrivacyLink()
+        LoginPagePo.getPrivacyLink().should('exist')
     })
 
     it('Should have reservation change link', () => {
-        LoginPagePo.getReservationChangeLink()
+        LoginPagePo.getReservationChangeLink().should('exist')
     })
 
     it('Should have language selector', () => {
-        LoginPagePo.getLanguageSelector()
+        LoginPagePo.getLanguageSelector().should('exist')
     })
 })

@@ -22,7 +22,7 @@ const SELECTORS = Object.freeze({
 class ProfilePageObjects {
 
     getLogoImage() {
-        cy.get(SELECTORS.LOGOIMAGE)
+        return cy.get(SELECTORS.LOGOIMAGE)
     }
 
     getCurrencySelector() {
@@ -38,7 +38,7 @@ class ProfilePageObjects {
     }
 
     getAnimationSpan() {
-        cy.get(SELECTORS.ANIMATIONSPAN)
+        return cy.get(SELECTORS.ANIMATIONSPAN)
     }
 
     getProfilePicture() {

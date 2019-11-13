@@ -30,7 +30,7 @@ class LoginPageObjects {
     }
 
     getLogo() {
-        cy.get(LOGINSELECTORS.LOGO)
+        return cy.get(LOGINSELECTORS.LOGO)
     }
 
     getDropdownButton() {
@@ -42,11 +42,11 @@ class LoginPageObjects {
     }
 
     getHeading() {
-        cy.get(LOGINSELECTORS.HEADING)
+        return cy.get(LOGINSELECTORS.HEADING)
     }
 
     getDescription() {
-        cy.get(LOGINSELECTORS.DESCRIPTION)
+       return cy.get(LOGINSELECTORS.DESCRIPTION)
     }
 
     getEmailInput() {

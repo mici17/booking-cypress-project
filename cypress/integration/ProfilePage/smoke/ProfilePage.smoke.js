@@ -15,32 +15,29 @@ import {
 
 describe('Testing of elements existing on Profile Page', () => {
     before(() => {
-        HomePagePo.visit()
-        HomePagePo
-            .getLoginButton()
-            .click()
+        LoginPagePo.visit()
         LoginPagePo.enterEmail(CREDENTIALS.EMAIL)
         LoginPagePo.enterPassword(CREDENTIALS.PASSWORD)
     })
 
     it('Logo image should exist on page', () => {
-        ProfilePagePo.getLogoImage()
+        ProfilePagePo.getLogoImage().should('exist')
     })
 
     it('Currency selector should exist on page', () => {
-        ProfilePagePo.getCurrencySelector()
+        ProfilePagePo.getCurrencySelector().should('exist')
     })
 
     it('Language selector should exist on page', () => {
-        ProfilePagePo.getLanguageSelector()
+        ProfilePagePo.getLanguageSelector().should('exist')
     })
 
     it('Profile picture should exist on page', () => {
-        ProfilePagePo.getProfilePicture()
+        ProfilePagePo.getProfilePicture().should('exist')
     })
 
     it('Username should exist on page', () => {
-        ProfilePagePo.getUserName()
+        ProfilePagePo.getUserName().should('exist')
     })
 
     it('Dropdown menu should exist on page when username is clicked', () => {
@@ -53,34 +50,34 @@ describe('Testing of elements existing on Profile Page', () => {
     })
 
     it('My dashboard link should exist on page', () => {
-        ProfilePagePo.getDashboard()
+        ProfilePagePo.getDashboard().should('exist')
     })
 
     it('My reservations link should exist on page', () => {
-        ProfilePagePo.getReservations()
+        ProfilePagePo.getReservations().should('exist')
     })
 
     it('Rewiew link should exist on page', () => {
-        ProfilePagePo.getRewiev()
+        ProfilePagePo.getRewiev().should('exist')
     })
 
     it('Wishlists link should exist on page', () => {
-        ProfilePagePo.getWishLists()
+        ProfilePagePo.getWishLists().should('exist')
     })
 
     it('Get the app link should exist on page', () => {
-        ProfilePagePo.getGta()
+        ProfilePagePo.getGta().should('exist')
     })
 
     it('Help link should exist on page', () => {
-        ProfilePagePo.getHelp()
+        ProfilePagePo.getHelp().should('exist')
     })
 
     it('Settings link should exist on page', () => {
-        ProfilePagePo.getSettings()
+        ProfilePagePo.getSettings().should('exist')
     })
 
     it('Sign out link should exist on page', () => {
-        ProfilePagePo.getSignOut()
+        ProfilePagePo.getSignOut().should('exist')
     })
 })
