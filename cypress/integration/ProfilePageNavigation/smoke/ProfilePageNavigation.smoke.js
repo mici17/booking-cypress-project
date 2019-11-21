@@ -48,4 +48,8 @@ describe('Testing if elements exist on page', () => {
         ProfilePageNavigationPO.getListYourPropertyLink().should('exist')
     })
 
+    it('Travel community link should exist on page', ()=> {
+         ProfilePageNavigationPO.getTravelCommunitiesLink().should('exist')
+    })
+
 })

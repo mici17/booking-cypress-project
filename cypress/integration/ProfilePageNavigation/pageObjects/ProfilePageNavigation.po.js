@@ -4,7 +4,8 @@ const SELECTORS = Object.freeze({
     BOOKINGLINK: '.guides--bookings',
     REVIEWSLINK: '.guides--reviews',
     SETTINGSLINK: '.js-insiderguides-track',
-    LISTYOURPROPERTYLINK: '.profile-area__nav-item-myreferrals'
+    LISTYOURPROPERTYLINK: '.profile-area__nav-item-myreferrals',
+    TRAVELCOMMUNITIESLINK: '.profile_menu__item--travel-communities'
 })
 
 class ProfilePageNavigationPageObjects {
@@ -31,6 +32,10 @@ class ProfilePageNavigationPageObjects {
 
     getListYourPropertyLink() {
         return cy.get(SELECTORS.LISTYOURPROPERTYLINK)
+    }
+
+    getTravelCommunitiesLink() {
+        return cy.get(SELECTORS.TRAVELCOMMUNITIESLINK)
     }
 }
 
