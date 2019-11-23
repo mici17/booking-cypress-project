@@ -1,6 +1,6 @@
 import {
-    SettingsPagePo
-} from '../../pageObjects/SettingsPage.po';
+    BookingAccountPo
+} from '../pageObjects/BookingAccount.po';
 import {
     LoginPagePo
 } from '../../../LoginPage/pageObjects/LoginPage.po';
@@ -26,71 +26,71 @@ describe('Testing of elements existing on  Page', () => {
     })
 
     it('Title should exist on page', () => {
-        SettingsPagePo.getHeadTitle().should('exist')
+        BookingAccountPo.getHeadTitle().should('exist')
     })
 
     it('Subtitle should exist on page', () => {
-        SettingsPagePo.getHeadSubtitle().should('exist')
+        BookingAccountPo.getHeadSubtitle().should('exist')
     })
 
     it('Label profile picture should exist on page', () => {
-        SettingsPagePo.getLabel().eq(0).should('exist')
+        BookingAccountPo.getLabel().eq(0).should('exist')
     })
 
     it('Avatar should exist on page', () => {
-        SettingsPagePo.getAvatar().should('exist')
+        BookingAccountPo.getAvatarImage().should('exist')
     })
 
     it('Control button should exist on page', () => {
-        SettingsPagePo.getControlButton().should('exist')
+        BookingAccountPo.getControlButton().should('exist')
     })
 
     it('Legend should exist on page', () => {
-        SettingsPagePo.getLegendItem().eq(0).should('exist')
+        BookingAccountPo.getLegendItem().eq(0).should('exist')
     })
 
     it('Label display name should exist on page', () => {
-        SettingsPagePo.getLabel().eq(1).should('exist')
+        BookingAccountPo.getLabel().eq(1).should('exist')
     })
 
     it('Input nickname should exist on page', () => {
-        SettingsPagePo.getNickname().should('exist')
+        BookingAccountPo.getNickname().should('exist')
     })
 
     it('Legend should exist on page', () => {
-        SettingsPagePo.getLegendItem().eq(1).should('exist')
+        BookingAccountPo.getLegendItem().eq(1).should('exist')
     })
 
     it('Label birthday should exist on page', () => {
-        SettingsPagePo.getLabel().eq(2).should('exist')
+        BookingAccountPo.getLabel().eq(2).should('exist')
     })
 
     it('Input bday exist on page', () => {
-        SettingsPagePo.getBday().should('exist')
+        BookingAccountPo.getBday().should('exist')
     })
 
     it('Input bmonth exist on page', () => {
-        SettingsPagePo.getBmonth().should('exist')
+        BookingAccountPo.getBmonth().should('exist')
     })
 
     it('Input byear exist on page', () => {
-        SettingsPagePo.getByear().should('exist')
+        BookingAccountPo.getByear().should('exist')
     })
 
     it('Legend should exist on page', () => {
-        SettingsPagePo.getLegendItem().eq(2).should('exist')
+        BookingAccountPo.getLegendItem().eq(2).should('exist')
     })
 
     it('Label country should exist on page', () => {
-        SettingsPagePo.getLabel().eq(3).should('exist')
+        BookingAccountPo.getLabel().eq(3).should('exist')
     })
 
     it('Input nationality exist on page', () => {
-        SettingsPagePo.getNationality().should('exist')
+        BookingAccountPo.getNationality().should('exist')
     })
 
     it('Legend should exist on page', () => {
-        SettingsPagePo.getLegendItem().eq(3).should('exist')
+        BookingAccountPo.getLegendItem().eq(3).should('exist')
     })
 
 

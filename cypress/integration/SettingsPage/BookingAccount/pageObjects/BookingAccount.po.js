@@ -19,7 +19,7 @@ const SELECTORS = Object.freeze({
 
 })
 
-class SettingsPagePageObjects {
+class BookingAccountPageObjects {
     getNavbar() {
         return cy.get(SELECTORS.NAVBAR)
     }
@@ -89,4 +89,4 @@ class SettingsPagePageObjects {
     }
 }
 
-export const SettingsPagePo = new SettingsPagePageObjects()
+export const BookingAccountPo = new BookingAccountPageObjects()

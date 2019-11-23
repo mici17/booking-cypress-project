@@ -1,6 +1,6 @@
 import {
-    SettingsPagePo
-} from '../../pageObjects/SettingsPage.po';
+    BookingAccountPo
+} from '../pageObjects/BookingAccount.po';
 import {
     LoginPagePo
 } from '../../../LoginPage/pageObjects/LoginPage.po';
@@ -26,38 +26,38 @@ describe('Testing of elements existing on  Page', () => {
     })
 
     it('Profile picture can be changed', () => {
-        SettingsPagePo
+        BookingAccountPo
             .getControlButton()
             .eq(0)
             .click()
-        SettingsPagePo
+        BookingAccountPo
             .getAvatarForm()
             .should('exist')
-        SettingsPagePo
+        BookingAccountPo
             .getXButton()
             .click()
     })
 
     it('Display name can be changed', () => {
-        SettingsPagePo
+        BookingAccountPo
             .getNickname()
             .type('Prima17')
     })
 
     it('Birthday date can be changed', () => {
-        SettingsPagePo
+        BookingAccountPo
             .getBday()
             .select('25')
-        SettingsPagePo
+        BookingAccountPo
             .getBmonth()
             .select('May')
-        SettingsPagePo
+        BookingAccountPo
             .getByear()
             .select('1985')
     })
 
     it('Country can be changed', () => {
-        SettingsPagePo
+        BookingAccountPo
             .getNationality()
             .select('Montenegro')
     })
