@@ -4,7 +4,11 @@ const SELECTORS = Object.freeze({
     SUBTITLE: '.settings-head__subheading',
     CONTENT: '.settings-content',
     LABEL: '.settings-item__label',
-    AVATAR: '.settings-avatar',
+    AVATARIMAGE: '.avatar_img',
+    AVATARUPLOADFORM: '.user-avatar-upload',
+    AVATARUPLOABUTTON: '.avatar-upload-file',
+    AVATARSAVEBUTTON: '.submit-avatar',
+    XBUTTON: '.modal-mask-closeBtn',
     CONTROLBUTTON: '.settings-control--button',
     LEGENDITEM: '.settings-input__legenditem',
     NICKNAME: '#nickname',
@@ -36,8 +40,24 @@ class SettingsPagePageObjects {
         return cy.get(SELECTORS.LABEL)
     }
 
-    getAvatar() {
-        return cy.get(SELECTORS.AVATAR)
+    getAvatarImage() {
+        return cy.get(SELECTORS.AVATARIMAGE)
+    }
+
+    getAvatarForm() {
+        return cy.get(SELECTORS.AVATARUPLOADFORM)
+    }
+
+    getAvatarUploadButton() {
+        return cy.get(SELECTORS.AVATARUPLOADBUTTON)
+    }
+
+    getXButton() {
+        return cy.get(SELECTORS.XBUTTON)
+    }
+
+    getAvatarSaveButton() {
+        return cy.get(SELECTORS.AVATARSAVEBUTTON)
     }
 
     getControlButton() {
