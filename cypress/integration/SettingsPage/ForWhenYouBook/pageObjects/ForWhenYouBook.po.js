@@ -7,10 +7,11 @@ const SELECTORS = Object.freeze({
     LASTNAME: '#lastname',
     PHONE: '#phone',
     EMAIL: '#email',
-    CHANGEADDRESSBUTTON: '.settings-control',
+    CHANGEADDRESSBUTTON: '.settings-address__content .settings-control',
     ADDRESSFORM: '.settings-form--personal',
-    ADDRESSINPUT: '.settings-control'
-
+    ADDRESSINPUT: '.settings-form__label .settings-control',
+    SAVEBUTTON: '.settings-form--personal .settings-control--blue-button',
+    CANCELBUTTON: '.settings-form--personal .settings-control--button'
 })
 
 class ForWhenYouBookPageObjects {
@@ -56,6 +57,14 @@ class ForWhenYouBookPageObjects {
 
     getAddressInput() {
         return cy.get(SELECTORS.ADDRESSINPUT)
+    }
+
+    getSaveButton() {
+        return cy.get(SELECTORS.SAVEBUTTON)
+    }
+
+    getCancelButton() {
+        return cy.get(SELECTORS.CANCELBUTTON)
     }
 }
 

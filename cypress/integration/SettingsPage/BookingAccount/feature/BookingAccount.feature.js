@@ -41,13 +41,20 @@ describe('Testing of functionality on Settings Page - part Booking Account', () 
     it('Display name can be changed', () => {
         BookingAccountPo
             .getNickname()
+            .clear()
             .type('Prima17')
+        BookingAccountPo
+            .getNickname()
+            .should('have.value', 'Prima17')
     })
 
-    it('Birthday date can be changed', () => {
+    it('Birthday day can be changed', () => {
         BookingAccountPo
             .getBday()
             .select('25')
+        BookingAccountPo
+            .getBday()
+            .should('have.value','25')
         BookingAccountPo
             .getBmonth()
             .select('May')
@@ -56,9 +63,30 @@ describe('Testing of functionality on Settings Page - part Booking Account', () 
             .select('1985')
     })
 
+    it('Birthday month can be changed', () => {
+        BookingAccountPo
+            .getBmonth()
+            .select('May')
+        BookingAccountPo
+            .getBmonth()
+            .should('have.value','5')
+    })
+
+    it('Birthday year can be changed', () => {
+        BookingAccountPo
+            .getByear()
+            .select('1985')
+        BookingAccountPo
+            .getByear()
+            .should('have.value','1985')
+    })
+
     it('Country can be changed', () => {
         BookingAccountPo
             .getNationality()
             .select('Montenegro')
+        BookingAccountPo
+            .getNationality()
+            .should('have.value', 'me')
     })
 })
