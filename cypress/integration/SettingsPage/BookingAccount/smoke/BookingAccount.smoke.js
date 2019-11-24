@@ -12,7 +12,7 @@ import {
 } from '../../../ProfilePage/pageObjects/ProfilePage.po';
 
 
-describe('Testing of elements existing on  Page', () => {
+describe('Testing of elements existing on Settings Page - part Booking Account', () => {
     before(() => {
         LoginPagePo.visit()
         LoginPagePo.enterEmail(CREDENTIALS.EMAIL)
