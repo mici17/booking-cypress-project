@@ -16,7 +16,6 @@ const SELECTORS = Object.freeze({
     BMONTH: '#bmonth',
     BYEAR: '#byear',
     NATIONALITY: '#nationality'
-
 })
 
 class BookingAccountPageObjects {

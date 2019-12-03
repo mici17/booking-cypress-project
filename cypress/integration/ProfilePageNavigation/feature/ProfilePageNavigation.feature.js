@@ -47,12 +47,6 @@ describe('Navigation functionality tests', () => {
         GlobalPO.getUrl().should('include', '/mysettings')
     })
 
-
-    // it('Should navigate to List your property page when list your property link is clicked', () => {
-    //     ProfilePageNavigationPO.getListYourPropertyLink().click()
-    //     GlobalPO.getUrl().should('include', 'https://join.booking.com/')
-    // })
-
     it('Should navigate to Communities page when travel communities link is clicked', () => {
         ProfilePageNavigationPO.getSettingsLink().click()
         GlobalPO.getUrl().should('include', '/communities')

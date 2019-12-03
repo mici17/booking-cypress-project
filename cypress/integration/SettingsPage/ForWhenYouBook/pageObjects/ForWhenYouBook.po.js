@@ -1,6 +1,6 @@
 const SELECTORS = Object.freeze({
-    HEADTITLE: '.settings-head__title__h2',
-    SUBTITLE: '.settings-head__subheading',
+    HEADTITLE: '#when-you-book .settings-head__title__h2',
+    SUBTITLE: '#when-you-book .settings-head__subheading',
     LABEL: '.settings-item__label',
     USERTITLE: '#user_title',
     FIRSTNAME: '#firstname',
